@@ -69,20 +69,26 @@ main{
 .coin{
     position: fixed;
     top:0;
-    overflow: hidden;
-    width:50px;
-    height:50px;
+
     &-1{
     top: -70px;
     width: 70px;
     height: 70px;
-    animation-duration:5s;
+    //for coin dropping 
+    animation-name: move;
+    //ease-in: slowly in  
+    animation-timing-function:ease-in;
+    animation-iteration-count:infinite;
+    animation-duration:4s;
     }
     
     &-2{
     top: -50px;
     width: 50px;
     height: 50px;
+    animation-name: move;
+    animation-timing-function:ease-in;
+    animation-iteration-count:infinite;
     animation-duration:3s;
     }
 
@@ -90,17 +96,12 @@ main{
     top: -40px;
     width: 40px;
     height: 40px;
+    animation-name: move;
+    animation-timing-function:ease-in;
+    animation-iteration-count:infinite;
     animation-duration:2s;
     }
 }
-.coin_animation{
-    //for coin dropping TODO:check animation
-    animation-name: move;
-    //ease-in: slowly in  
-    animation-timing-function:ease-in;
-    animation-iteration-count:infinite;
-}
-
 
 
 @keyframes move {
@@ -108,7 +109,7 @@ main{
     top:0%;
     }
     to {
-    top:50%
+    top:45%
     }
 }
 
