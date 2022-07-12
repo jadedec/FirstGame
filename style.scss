@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: row;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2b4650;
+    overflow: hidden;
+}
+.time{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 130px;
+    height: 50px;
+    // line-height: 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    text-align: center;
+    // z-index: 10;
+}
+.setting{
+    width: 100vw;
+    height: 450px;
+    background-color: #ff9900;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.title{
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+// class =coin+difficulty
+.coin1{
+    position: absolute;
+    top: -70px;
+    width: 70px;
+    height: 70px;
+    background-color: #ff9900;
+    border-radius: 50%;
+    //for coin dropping TODO:check animation
+    animation-name: move;
+    animation-duration:3s;
+    animation-timing-function:ease-in;
+}
+
+
+.coin2{
+    position: absolute;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff9900;
+    border-radius: 50%;
+    animation-name: move;
+    animation-duration:2s;
+    animation-timing-function:ease-in;
+}
+.coin3{
+    position: absolute;
+    top: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: #ff9900;
+    border-radius: 50%;
+    animation-name: move;
+    animation-duration:1s;
+    animation-timing-function:ease-in;
+}
+.button{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: #2b4650;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 50px;
+    cursor: pointer;
+    margin: 30px auto;
+}
+.result{
+    font-size: 20px;
+}
+
+.menu{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+    body{
+        flex-direction: row;
+    }
+    main{
+        width: 800px;
+        height: 500px;
+        flex-direction: row;
+    }
+    .setting{
+        width: 300px;
+        height: 500px;
+    }
+}
