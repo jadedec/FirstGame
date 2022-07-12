@@ -10,7 +10,7 @@ body {
 
 main {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -33,7 +33,7 @@ main {
 
 .setting {
   width: 100vw;
-  height: 450px;
+  height: 50vh;
   background-color: #ff9900;
   padding: 10px;
   box-sizing: border-box;
@@ -48,51 +48,6 @@ main {
   line-height: 40px;
 }
 
-.coin1 {
-  position: absolute;
-  top: -70px;
-  width: 70px;
-  height: 70px;
-  background-color: #ff9900;
-  border-radius: 50%;
-  -webkit-animation-name: move;
-          animation-name: move;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-}
-
-.coin2 {
-  position: absolute;
-  top: -50px;
-  width: 50px;
-  height: 50px;
-  background-color: #ff9900;
-  border-radius: 50%;
-  -webkit-animation-name: move;
-          animation-name: move;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-}
-
-.coin3 {
-  position: absolute;
-  top: -40px;
-  width: 40px;
-  height: 40px;
-  background-color: #ff9900;
-  border-radius: 50%;
-  -webkit-animation-name: move;
-          animation-name: move;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-}
-
 .button {
   width: 150px;
   height: 50px;
@@ -103,10 +58,10 @@ main {
   color: #fff;
   line-height: 50px;
   cursor: pointer;
-  margin: 30px auto;
 }
 
-.result {
+.score {
+  padding-top: 20px;
   font-size: 20px;
 }
 
@@ -114,17 +69,58 @@ main {
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    flex-direction: row;
+.coin {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+}
+.coin-1 {
+  top: -70px;
+  width: 70px;
+  height: 70px;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+.coin-2 {
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+.coin-3 {
+  top: -40px;
+  width: 40px;
+  height: 40px;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.coin_animation {
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes move {
+  from {
+    top: 0%;
   }
-  main {
-    width: 800px;
-    height: 500px;
-    flex-direction: row;
+  to {
+    top: 50%;
   }
-  .setting {
-    width: 300px;
-    height: 500px;
+}
+
+@keyframes move {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
