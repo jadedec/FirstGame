@@ -17,17 +17,28 @@
 
         <div class="setting">
             <div class="title menu">Setting</div>
-            <div class="difficulty mgb10">
-                <span>Difficulty:</span>
-                <input type="radio" name="difficulty" value="1" checked>EASY
-                <input type="radio" name="difficulty" value="2">HARD
-                <input type="radio" name="difficulty" value="3">SUPER HARD
+            <div class="difficulty menu">
+                <p>Choose your game difficulty:</p>
+                <!-- use radio type get one type of difficulty -->
+                <form>
+                    <input type="radio" class="difficultyButton" id="easy" name="difficulty" value="1">
+                    <label for="easy">EASY</label><br>
+                    <!-- <br> goes to a new line -->
+                    <input type="radio" class="difficultyButton" id="hard" name="difficulty" value="2">
+                    <label for="hard">HARD</label><br>
+                    <input type="radio" class="difficultyButton" id="superHard" name="difficulty" value="3">
+                    <label for="superHard">SUPER HARD</label><br>
+                </form>
             </div>
-            <div class="rule menu">Game instructions: Choose the difficulty and click start, the coins will fall within
+
+            <p class="rule menu">
+                Game instructions: Choose the difficulty and click start, the coins will fall within
                 30 seconds, click on the coins to score, 10 points for easy, 20 points for hard, 30 points for super
-                hard, the game ends after the countdown.</div>
-            <div class="btn">Start</div>
-            <div class="result">Score:<span>0</span></div>
+                hard, the game ends after the countdown.
+            </p>
+            <button class="button">Start</button>
+            <p class="result">Score:<span>0</span></p>
+        </div>
     </main>
     <script src="./script.js"></script>
 </body>
