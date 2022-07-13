@@ -4,10 +4,11 @@ const scoreBox = document.querySelector(".result");
 const button = document.querySelector(".button");
 const timer = document.querySelector(".timer");
 const radios = document.querySelectorAll(".difficultyButton");
-const coin = document.querySelector("img");
+const coin = document.querySelector("i.coin");
 
 let difficulty = 1; //default difficulty
 let score = 0;//original score
+let isGameStart = false;
 
 
 // Difficulty
@@ -22,21 +23,25 @@ radios.forEach(radio => {
 
 //Game start 
 const gameStart = () => {
-    score = 0;
-    scoreBox.innerHTML = score;//reset
-    //build a counting down timer
-    // Update the count down every 1 second
-    let timeNumber = 30;
-    let numberId = setInterval(() => {
-        //every 1s there will be a new coin
-        coinDisplay();
-        timeNumber -= 1;
-        timer.innerHTML = timeNumber;
-        if (timeNumber <= 0) {
-            //stop running the function
-            clearInterval(numberId);
-        }
-    }, 1000)//every 1000ms
+    if (!isGameStart) {
+        //avoid clicking start again during the game in process
+        isGameStart = true;
+        score = 0;
+        scoreBox.innerHTML = score;//reset
+        //build a counting down timer
+        // Update the count down every 1 second
+        let timeNumber = 30;
+        let numberId = setInterval(() => {
+            coinDisplay();
+            timeNumber -= 1;
+            timer.innerHTML = timeNumber;
+            if (timeNumber <= 0) {
+                //stop running the function
+                clearInterval(numberId);
+                isGameStart = false;
+            }
+        }, 1000)//every 1000ms
+    }
 }
 
 button.addEventListener('click', gameStart);
@@ -59,7 +64,20 @@ const coinDisplay = () => {
     main.appendChild(coin);
 
     //when time runs out, stop displaying coins, give 4s for the last one
-    setTimeout(() => main.removeChild(coin), 2600);
+
+    switch (difficulty) {
+        case "1":
+            setTimeout(() => main.removeChild(coin), 4000);
+            break;
+        case "2":
+            setTimeout(() => main.removeChild(coin), 3000);
+            break;
+        case "3":
+            setTimeout(() => main.removeChild(coin), 2000);
+            break;
+        default:
+            break;
+    }
 
     coin.addEventListener('click', () => {
         main.removeChild(coin);
