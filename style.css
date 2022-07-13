@@ -48,6 +48,10 @@ main {
   font-weight: bold;
   line-height: 40px;
 }
+.title img {
+  width: 25px;
+  height: 25px;
+}
 
 .button {
   width: 150px;
@@ -72,7 +76,6 @@ main {
 
 .coin {
   position: fixed;
-  top: 0;
 }
 .coin-1 {
   top: 50vh;

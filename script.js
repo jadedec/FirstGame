@@ -4,7 +4,6 @@ const scoreBox = document.querySelector(".result");
 const button = document.querySelector(".button");
 const timer = document.querySelector(".timer");
 const radios = document.querySelectorAll(".difficultyButton");
-const coin = document.querySelector("i.coin");
 
 let difficulty = 1; //default difficulty
 let score = 0;//original score
@@ -39,6 +38,7 @@ const gameStart = () => {
                 //stop running the function
                 clearInterval(numberId);
                 isGameStart = false;
+                alert("Time out");
             }
         }, 1000)//every 1000ms
     }
@@ -58,13 +58,14 @@ const coinDisplay = () => {
     //get window length,  -50 make sure enough space for coin
     const width = window.innerWidth - 50;
     //get random position for coin to start
-    let randomLeft = Math.random() * width;
+    let randomLeft = Math.random() * width + 10;
     coin.style.left = randomLeft + "px"
     //  // add the coin to main
     main.appendChild(coin);
 
-    //when time runs out, stop displaying coins, give 4s for the last one
-
+    //TODO:check if it still exists, it maybe removed by click
+    //Disappear after touching the land
+    //can delete this part if change the top to minus, the coin will be at the top but won't show
     switch (difficulty) {
         case "1":
             setTimeout(() => main.removeChild(coin), 4000);
@@ -79,12 +80,17 @@ const coinDisplay = () => {
             break;
     }
 
-    coin.addEventListener('click', () => {
+    const coinCaught = () => {
         main.removeChild(coin);
         score += 10 * difficulty;
         scoreBox.innerHTML = score;
-    })
+    }
+    coin.addEventListener("mousedown", coinCaught);
 }
+
+
+
+
 
 
 
