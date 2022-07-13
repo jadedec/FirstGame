@@ -33,7 +33,7 @@ main {
 
 .setting {
   width: 100vw;
-  height: 50vh;
+  height: 25rem;
   background-color: #ff9900;
   padding: 10px;
   box-sizing: border-box;
@@ -81,8 +81,8 @@ main {
           animation-name: move;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
 }
@@ -94,8 +94,8 @@ main {
           animation-name: move;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
 }
@@ -107,8 +107,8 @@ main {
           animation-name: move;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
 }
@@ -118,7 +118,7 @@ main {
     top: 0%;
   }
   to {
-    top: 45%;
+    top: 100%;
   }
 }
 
@@ -127,6 +127,6 @@ main {
     top: 0%;
   }
   to {
-    top: 45%;
+    top: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

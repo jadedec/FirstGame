@@ -15,17 +15,18 @@ const difficultyChosen = (event) => {
     difficulty = event.target.value;
 }
 radios.forEach(radio => {
-    //use"change" instead of "click" to avoid running repeatly
+    //use"change" instead of "click" to avoid running repeatedly
     radio.addEventListener("change", difficultyChosen)
 })
 
 
 //Game start 
 const gameStart = () => {
-    score = 0;//reset
+    score = 0;
+    scoreBox.innerHTML = score;//reset
     //build a counting down timer
     // Update the count down every 1 second
-    let timeNumber = 10;
+    let timeNumber = 30;
     let numberId = setInterval(() => {
         //every 1s there will be a new coin
         coinDisplay();
@@ -49,13 +50,16 @@ const coinDisplay = () => {
     coin.src = "./GoldenCoin.png";
     coin.classList.add("coin");
     coin.classList.add("coin-" + difficulty);
-    //get window length
-    const width = window.innerWidth;
+    //get window length,  -50 make sure enough space for coin
+    const width = window.innerWidth - 50;
     //get random position for coin to start
     let randomLeft = Math.random() * width;
     coin.style.left = randomLeft + "px"
     //  // add the coin to main
     main.appendChild(coin);
+
+    //when time runs out, stop displaying coins, give 4s for the last one
+    setTimeout(() => main.removeChild(coin), 2600);
 
     coin.addEventListener('click', () => {
         main.removeChild(coin);
@@ -64,7 +68,7 @@ const coinDisplay = () => {
     })
 }
 
-//TODO:when time runs outerHeight, stop displaying coins
+
 
 
 

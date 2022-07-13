@@ -31,7 +31,7 @@ main{
 }
 .setting{
     width: 100vw;
-    height: 50vh;
+    height:25rem;
     background-color: #ff9900;
     padding: 10px;
     box-sizing: border-box;
@@ -78,7 +78,7 @@ main{
     animation-name: move;
     //ease-in: slowly in  
     animation-timing-function:ease-in;
-    animation-iteration-count:infinite;
+    animation-iteration-count:1;
     animation-duration:4s;
     }
     
@@ -88,7 +88,7 @@ main{
     height: 50px;
     animation-name: move;
     animation-timing-function:ease-in;
-    animation-iteration-count:infinite;
+    animation-iteration-count:1;
     animation-duration:3s;
     }
 
@@ -98,7 +98,7 @@ main{
     height: 40px;
     animation-name: move;
     animation-timing-function:ease-in;
-    animation-iteration-count:infinite;
+    animation-iteration-count:1;
     animation-duration:2s;
     }
 }
@@ -106,10 +106,10 @@ main{
 
 @keyframes move {
     from{
-    top:0%;
+    top:0%
     }
     to {
-    top:45%
+    top:100%
     }
 }
 
