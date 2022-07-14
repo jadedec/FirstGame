@@ -1,20 +1,31 @@
 # FirstGame
 
-[COIN COLLECTOR]  
-<img width="635" alt="image" src="https://user-images.githubusercontent.com/106964384/178778995-3164d9f9-0437-47de-9f7f-467c92c293a4.png">
+[COIN COLLECTOR] <br>
+Display page <br>
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/106964384/178778995-3164d9f9-0437-47de-9f7f-467c92c293a4.png"><br>
+<br></br>
 
-Game instructions:  
- Choose the difficulty and click start, the coins will fall within 30 seconds  
- Click on the coins to score, 10 points for easy, 20 points for hard, 30 points for superHard.  
- The game ends after the countdown.
+GameOver Page <br>
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/106964384/178991369-3d4ad5b3-722a-4975-8164-77780ce123ac.png"><br>
+<br></br>
+After the time runs out, will show the result to the player.<br>
+There is also a button "RESTART", click on that can restart the game.<br>
+At the same time, this gameOver window will disappear.<br>
 
-For Players:  
-The bigger the screen, the harder it will be.  
-If you feel like the game is too easy, switch to a bigger screen.
+Game instructions: <br>
+Choose the difficulty and click start, the coins will fall within 30 seconds <br>
+Click on the coins to score, 10 points for easy, 20 points for hard, 30 points for superHard. <br>
+The game ends after the countdown.<br>
 
-Developer Tips:  
- use MouseDown instead of Click for catching the coin, which is better.
+For Players: <br>
+The bigger the screen, the harder it will be. <br>
+If you feel like the game is too easy, switch to a bigger screen.<br>
 
-TODO:  
- check if the coin still exists in main, it maybe removed by click.  
- don't know how to check the existence for element now.
+Developer Tips: <br>
+Use MouseDown instead of Click for catching the coin, which is better.<br>
+
+TODO: <br>
+Check if the coin still exists in main, it maybe removed by click. <br>
+Don't know how to check the existence for element now.<br>
+Will report the error when JS want to delete the coin but the coin already deleted by click.<br>
+This is not urgent, and can be fixed if change the top of coins into minus to hide them but it is not ideal.<br>
