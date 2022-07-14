@@ -23,6 +23,7 @@ If you feel like the game is too easy, switch to a bigger screen.<br>
 
 Developer Tips: <br>
 Use MouseDown instead of Click for catching the coin, which is better.<br>
+Create a cursor button for pointer on button.<br>
 
 TODO: <br>
 Check if the coin still exists in main, it maybe removed by click. <br>
