@@ -66,16 +66,15 @@ const coinDisplay = () => {
 
     //TODO:check if it still exists, it maybe removed by click
     //Disappear after touching the land
-    //can delete this part if change the top to minus, the coin will be at the top but won't show
     switch (difficulty) {
         case "1":
-            setTimeout(() => main.removeChild(coin), 4000);
-            break;
-        case "2":
             setTimeout(() => main.removeChild(coin), 3000);
             break;
-        case "3":
+        case "2":
             setTimeout(() => main.removeChild(coin), 2000);
+            break;
+        case "3":
+            setTimeout(() => main.removeChild(coin), 1000);
             break;
         default:
             break;
@@ -97,6 +96,7 @@ const gameOver = () => {
     gameOverContainer.innerHTML += `
     <p>Time Out! <br>
     coin:  ${number} <br>
+    miss:  ${30 - number}<br>
     score:  ${score}</p>
     <button class="button button-restart">RESTART</button>`
     main.appendChild(gameOverContainer);
