@@ -14,6 +14,7 @@ main{
     height: 100vh;
     background-color: #2b4650;
     overflow: hidden;
+    cursor: url(pointer.svg),auto;
 }
 .time{
     position: absolute;
@@ -34,6 +35,8 @@ main{
     padding: 10px;
     box-sizing: border-box;
     font-size: 16px;
+    //TODO: cursor pattern for radio input
+    cursor: auto;
 }
 .title{
     font-size: 30px;
