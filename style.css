@@ -87,8 +87,8 @@ main {
           animation-timing-function: ease-in;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 .coin-2 {
   top: 50vh;
@@ -100,8 +100,8 @@ main {
           animation-timing-function: ease-in;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 .coin-3 {
   top: 50vh;
@@ -113,8 +113,8 @@ main {
           animation-timing-function: ease-in;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 @-webkit-keyframes move {
@@ -138,7 +138,7 @@ main {
   margin: 0 auto;
   margin-bottom: 10rem;
   font-size: 2rem;
-  background-color: gold;
+  background-color: #ff9900;
   width: 20rem;
   height: 13.5rem;
   text-align: center;

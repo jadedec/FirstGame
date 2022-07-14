@@ -30,7 +30,7 @@ const gameStart = () => {
         scoreBox.innerHTML = score;//reset
         //build a counting down timer
         // Update the count down every 1 second
-        let timeNumber = 5;
+        let timeNumber = 30;
         let numberId = setInterval(() => {
             coinDisplay();
             timeNumber -= 1;
@@ -39,7 +39,7 @@ const gameStart = () => {
                 //stop running the function
                 clearInterval(numberId);
                 isGameStart = false;
-                setTimeout(gameOver, 2500);
+                setTimeout(gameOver, 2000);
             }
         }, 1000)//every 1000ms
     }
