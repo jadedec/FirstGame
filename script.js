@@ -8,7 +8,7 @@ const radios = document.querySelectorAll(".difficultyButton");
 let difficulty = 1; //default difficulty
 let score = 0;//original score
 let isGameStart = false;
-
+let number = 0;//coin caught
 
 // Difficulty
 const difficultyChosen = (event) => {
@@ -26,10 +26,11 @@ const gameStart = () => {
         //avoid clicking start again during the game in process
         isGameStart = true;
         score = 0;
+        number = 0;
         scoreBox.innerHTML = score;//reset
         //build a counting down timer
         // Update the count down every 1 second
-        let timeNumber = 30;
+        let timeNumber = 5;
         let numberId = setInterval(() => {
             coinDisplay();
             timeNumber -= 1;
@@ -38,7 +39,7 @@ const gameStart = () => {
                 //stop running the function
                 clearInterval(numberId);
                 isGameStart = false;
-                alert("Time out!");
+                setTimeout(gameOver, 2500);
             }
         }, 1000)//every 1000ms
     }
@@ -84,12 +85,28 @@ const coinDisplay = () => {
         main.removeChild(coin);
         score += 10 * difficulty;
         scoreBox.innerHTML = score;
-        let number = 0;
+
         number++;
     }
     coin.addEventListener("mousedown", coinCaught);
 }
 
+const gameOver = () => {
+    let gameOverContainer = document.createElement("div");
+    gameOverContainer.classList.add("container");
+    gameOverContainer.innerHTML += `
+    <p>Time Out! <br>
+    coin:  ${number} <br>
+    score:  ${score}</p>
+    <button class="button button-restart">RESTART</button>`
+    main.appendChild(gameOverContainer);
+
+    const restartButton = document.querySelector(".button-restart");
+    restartButton.addEventListener("click", () => {
+        main.removeChild(gameOverContainer);
+        gameStart();
+    });
+}
 
 
 
