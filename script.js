@@ -38,7 +38,7 @@ const gameStart = () => {
                 //stop running the function
                 clearInterval(numberId);
                 isGameStart = false;
-                alert("Time out");
+                alert("Time out!");
             }
         }, 1000)//every 1000ms
     }
@@ -84,6 +84,8 @@ const coinDisplay = () => {
         main.removeChild(coin);
         score += 10 * difficulty;
         scoreBox.innerHTML = score;
+        let number = 0;
+        number++;
     }
     coin.addEventListener("mousedown", coinCaught);
 }
